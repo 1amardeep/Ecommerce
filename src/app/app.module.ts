@@ -9,13 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material-module';
 import { TableComponent } from './components/angular-material/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PlayerDetailsComponent } from './components/player-details/player-details.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    TableComponent    
+    TableComponent,
+    PlayerDetailsComponent,
+    PageNotFoundComponent    
   ],
   imports: [
     BrowserModule,

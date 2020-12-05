@@ -9,7 +9,7 @@ import { ClientDataService } from 'src/app/services/client-data.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
+  displayedColumns: string[] = ['id', 'name','color'];
   NAMES : string [];
   COLORS : string [];
   dataSource: MatTableDataSource<data>;
@@ -26,7 +26,7 @@ export class TableComponent implements OnInit {
 
     this.clientDataServie.getTableData().subscribe((obj : any) =>{
 
-      const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1, obj.NAMES , obj.COLORS ));
+      const users =obj.TEAM;
       this.dataSource = new MatTableDataSource(users);
 
       this.dataSource.paginator = this.paginator;
@@ -43,19 +43,4 @@ export class TableComponent implements OnInit {
     }
   }
 }
-
-/** Builds and returns a new User. */
-function createNewUser(id: number, NAMES, COLORS): data {
-
-  const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-      NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-  return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-  };
-}
-
 
