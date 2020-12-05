@@ -9,7 +9,7 @@ import { ClientDataService } from 'src/app/services/client-data.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name','color'];
+  displayedColumns: string[] = ['id', 'name'];
   NAMES : string [];
   COLORS : string [];
   dataSource: MatTableDataSource<data>;

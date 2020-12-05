@@ -5,37 +5,43 @@
       "id" : "1",
       "name" : "India",
       "color": "blue",
-      "description" : "Lets cheers for Indian Players"
+      "description" : "Lets cheers for Indian Players",
+      "url": "../../../assets/images/india.jpg"
     },
     {
       "id" : "2",
       "name" : "West Indies",
       "color": "maroon",
-      "description" : "Lets cheers for West Indies Players"
+      "description" : "Lets cheers for West Indies Players",
+      "url": "../../../assets/images/westindies.jpg"
     },
     {
       "id" : "3",
       "name" : "Australia",
       "color": "yellow",
-      "description" : "Lets cheers for Australia Players"
+      "description" : "Lets cheers for Australia Players",
+      "url": "../../../assets/images/australia.jpg"
     },
     {
       "id" : "4",
       "name" : "New Zealand",
       "color": "Black",
-      "description" : "Lets cheers for New Zealand Players"
+      "description" : "Lets cheers for New Zealand Players",
+      "url": "../../../assets/images/new_zealand.jpg"
     },
     {
       "id" : "5",
       "name" : "Pakistan",
       "color": "Green",
-      "description" : "Lets cheers for Pakistan Players"
+      "description" : "Lets cheers for Pakistan Players",
+      "url": "../../../assets/images/pk.jpg"
     },
     {
       "id" : "6",
       "name" : "Zimbabwe",
       "color": "red",
-      "description" : "Lets cheers for Zimbabwe Players"
+      "description" : "Lets cheers for Zimbabwe Players",
+      "url": "../../../assets/images/zim.png"
     }
  ]
 }
