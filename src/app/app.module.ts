@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { EditPlayerComponent } from './components/edit-player/edit-player.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     TableComponent,
     PlayerDetailsComponent,
     PageNotFoundComponent,
-    FooterComponent    
+    FooterComponent,
+    EditPlayerComponent    
   ],
   imports: [
     BrowserModule,
