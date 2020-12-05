@@ -36,7 +36,7 @@ export class PlayerDetailsComponent implements OnInit {
   }
 
   editPlayer() {
-    this.router.navigate(['/edit-player'], { queryParams: { selectedTeam: this.selectedTeam.name } });
+    this.router.navigate(['edit-player'], {relativeTo: this.route} );   // { queryParams: { selectedTeam: this.selectedTeam.name } });
   }
 
 }

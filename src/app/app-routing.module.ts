@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EditPlayerComponent } from './components/edit-player/edit-player.component';
@@ -8,8 +8,18 @@ import { PlayerDetailsComponent } from './components/player-details/player-detai
 
 const routes: Routes = [
  { path: "dashboard", component : DashboardComponent},
- { path: "playersDetails/:id", component : PlayerDetailsComponent},
- {path: "edit-player", component : EditPlayerComponent },
+ { path: "playersDetails/:id",
+   children : [{
+     path : "",
+     component : PlayerDetailsComponent},
+     {
+       path: "edit-player",
+       component : EditPlayerComponent
+     }
+   ]
+  },
+ //,
+ { path: 'players', loadChildren: () => import('./players/players.module').then(m => m.PlayersModule) },
  { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
  { path: '**', component: PageNotFoundComponent }
 ];
