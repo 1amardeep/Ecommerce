@@ -11,6 +11,7 @@ import { TableComponent } from './components/angular-material/table/table.compon
 import { HttpClientModule } from '@angular/common/http';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     DashboardComponent,
     TableComponent,
     PlayerDetailsComponent,
-    PageNotFoundComponent    
+    PageNotFoundComponent,
+    FooterComponent    
   ],
   imports: [
     BrowserModule,
