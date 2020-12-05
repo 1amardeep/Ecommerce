@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ClientDataService } from 'src/app/services/client-data.service';
+import { BackButtonService } from 'src/app/services/back-button.service';
 
 @Component({
   templateUrl: './player-details.component.html',
@@ -12,10 +13,13 @@ export class PlayerDetailsComponent implements OnInit {
 
   constructor(   private route: ActivatedRoute, 
     private location: Location,
+    private router : Router,
+    private backCheck : BackButtonService,
     private clientDataServie : ClientDataService) { }
 
   ngOnInit() {
     this.getDetails();
+    this.backCheck.backCheck(true);
   }
 
   getDetails(){
@@ -25,14 +29,14 @@ export class PlayerDetailsComponent implements OnInit {
     })
   }
 
-  goBack(): void {
-    this.location.back();
-  }
-
   getImage(){
     if(this.selectedTeam){
       return 'url('+this.selectedTeam.url+')'
     }
+  }
+
+  editPlayer() {
+    this.router.navigate(['/edit-player'], { queryParams: { selectedTeam: this.selectedTeam.name } });
   }
 
 }

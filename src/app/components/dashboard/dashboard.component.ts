@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackButtonService } from 'src/app/services/back-button.service';
 
 @Component({
    selector: 'app-dashboard',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
 
 export class DashboardComponent{
 
-    
+   constructor(private backCheck : BackButtonService){
+
+   }
+    ngOnInit(): void {
+      this.backCheck.backCheck(false);
+    }
 }
