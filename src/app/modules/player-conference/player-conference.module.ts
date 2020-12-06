@@ -5,8 +5,8 @@ import { PlayerConferenceRoutingModule } from './player-conference-routing.modul
 import { PlayerConferenceComponent } from './player-conference.component';
 import { PlayerConferenceDetailsComponent } from './player-conference-details/player-conference-details.component';
 import { PlayerConferenceCorrectionComponent } from './player-conference-correction/player-conference-correction.component';
-import { DemoMaterialModule } from 'src/app/material-module';
 import { PlayerConferenceTeamComponent } from './player-conference-team/player-conference-team.component';
+import { DemoMaterialModule } from '../material-module/material-module';
 
 
 @NgModule({

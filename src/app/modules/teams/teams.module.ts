@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TeamsRoutingModule } from './teams-routing.module';
 import { TeamsComponent } from './teams.component';
 import { ChartsModule } from 'ng2-charts';
-import { DemoMaterialModule } from 'src/app/material-module';
+import { DemoMaterialModule } from '../material-module/material-module';
 
 
 
