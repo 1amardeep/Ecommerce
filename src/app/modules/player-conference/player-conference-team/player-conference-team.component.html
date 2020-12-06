@@ -19,7 +19,8 @@
         [style.color]="'white'"
         [style.fontSize]="'20px'"
         [style.textShadow]="'2px 2px black'"
-        *matCellDef="let row" routerLink="/playersDetails/{{row.id}}"> {{row.name}} </td>
+        *matCellDef="let row"
+        (click)="conferenceDetails(row.id)"> {{row.name}} </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

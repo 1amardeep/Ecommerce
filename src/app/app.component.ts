@@ -14,13 +14,15 @@ export class AppComponent {
   constructor( private location: Location,
     private backButton : BackButtonService
     ){
-       this.backButton.getStatus().subscribe((decider : boolean)=>{
-        this.hideButton =  decider;
-       })
+      
     }
 
     ngOnInit(): void {
-      
+      this.backButton.getStatus().subscribe((decider : boolean)=>{
+        setTimeout(() => {
+          this.hideButton =  decider;
+        });     
+       })
     }
 
   goBack(): void {

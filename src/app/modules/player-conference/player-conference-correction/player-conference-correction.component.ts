@@ -3,10 +3,10 @@ import { BackButtonService } from 'src/app/services/back-button.service';
 
 @Component({
   selector: 'app-edit-player',
-  templateUrl: './edit-player.component.html',
-  styleUrls: ['./edit-player.component.scss']
+  templateUrl: './player-conference-correction.component.html',
+  styleUrls: ['./player-conference-correction.component.scss']
 })
-export class EditPlayerComponent implements OnInit {
+export class PlayerConferenceCorrectionComponent implements OnInit {
 
   constructor(
     private backCheck : BackButtonService
