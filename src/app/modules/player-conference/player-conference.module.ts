@@ -7,6 +7,7 @@ import { PlayerConferenceDetailsComponent } from './player-conference-details/pl
 import { PlayerConferenceCorrectionComponent } from './player-conference-correction/player-conference-correction.component';
 import { PlayerConferenceTeamComponent } from './player-conference-team/player-conference-team.component';
 import { DemoMaterialModule } from '../material-module/material-module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DemoMaterialModule } from '../material-module/material-module';
   imports: [
     CommonModule,
     PlayerConferenceRoutingModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class PlayerConferenceModule { }

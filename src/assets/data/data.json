@@ -6,42 +6,48 @@
       "name" : "India",
       "color": "blue",
       "description" : "Lets cheers for Indian Players",
-      "url": "../../../assets/images/india.jpg"
+      "url": "../../../assets/images/india.jpg",
+      "win" : 290
     },
     {
       "id" : "2",
       "name" : "West Indies",
       "color": "maroon",
       "description" : "Lets cheers for West Indies Players",
-      "url": "../../../assets/images/westindies.jpg"
+      "url": "../../../assets/images/westindies.jpg",
+      "win" : 176
     },
     {
       "id" : "3",
       "name" : "Australia",
       "color": "yellow",
       "description" : "Lets cheers for Australia Players",
-      "url": "../../../assets/images/australia.jpg"
+      "url": "../../../assets/images/australia.jpg",
+      "win" : 259
     },
     {
       "id" : "4",
       "name" : "New Zealand",
       "color": "Black",
       "description" : "Lets cheers for New Zealand Players",
-      "url": "../../../assets/images/new_zealand.jpg"
+      "url": "../../../assets/images/new_zealand.jpg",
+      "win" : 150
     },
     {
       "id" : "5",
       "name" : "Pakistan",
-      "color": "Green",
+      "color": "darkgreen",
       "description" : "Lets cheers for Pakistan Players",
-      "url": "../../../assets/images/pk.jpg"
+      "url": "../../../assets/images/pk.jpg",
+      "win" : 250
     },
     {
       "id" : "6",
       "name" : "Zimbabwe",
       "color": "red",
       "description" : "Lets cheers for Zimbabwe Players",
-      "url": "../../../assets/images/zim.png"
+      "url": "../../../assets/images/zim.png",
+      "win" : 100
     }
  ]
 }

@@ -1,8 +1,10 @@
 <mat-card>
     <div class="chart-wrapper">
-      <canvas baseChart 
+      <canvas baseChart #chart
       [data]="doughnutChartData"
       [labels]="doughnutChartLabels"
+      [colors]="colorsList"
+      [options]="chartOptions"
       [chartType]="doughnutChartType">
     </canvas>
   </div>
