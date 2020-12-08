@@ -8,7 +8,7 @@ import { BackButtonService } from './services/back-button.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Cricket .... !!!!';
+  title = 'Cricket Book !!!';
   hideButton = false;
 
   constructor( private location: Location,
