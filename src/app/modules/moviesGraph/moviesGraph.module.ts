@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TeamsRoutingModule } from './teams-routing.module';
-import { TeamsComponent } from './teams.component';
+import { MoviesGraphRoutingModule } from './moviesGraph-routing.module';
+import { MoviesGraphComponent } from './moviesGraph.component';
 import { ChartsModule } from 'ng2-charts';
 import { DemoMaterialModule } from '../material-module/material-module';
 
 
 
 @NgModule({
-  declarations: [TeamsComponent],
+  declarations: [MoviesGraphComponent],
   imports: [
     CommonModule,
-    TeamsRoutingModule,
+    MoviesGraphRoutingModule,
     ChartsModule,
     DemoMaterialModule
   ],
   exports:[]
 })
-export class TeamsModule { }
+export class MoviesGraphModule { }

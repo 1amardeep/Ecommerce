@@ -9,7 +9,7 @@ const routes: Routes = [
  {path:'authentication', component:LogInComponent},
  {path: 'dashboard', component : DashboardComponent },
  { path: 'player-conference', loadChildren: () => import('./modules/player-conference/player-conference.module').then(m => m.PlayerConferenceModule) },
- { path: 'teams', loadChildren: () => import('./modules/teams/teams.module').then(m => m.TeamsModule) },
+ { path: 'moviesGraph', loadChildren: () => import('./modules/moviesGraph/moviesGraph.module').then(m => m.MoviesGraphModule) },
  { path: '',   redirectTo: '/authentication', pathMatch: 'full' },
  { path: '**', component: PageNotFoundComponent },
 ];

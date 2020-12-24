@@ -6,12 +6,12 @@ import { ClientDataService } from 'src/app/services/client-data.service';
 
 @Component({
   selector: 'app-doughnut-chart',
-  templateUrl: './teams.component.html',
-  styleUrls: ['./teams.component.scss']
+  templateUrl: './moviesGraph.component.html',
+  styleUrls: ['./moviesGraph.component.scss']
 })
 
 
-export class TeamsComponent {
+export class MoviesGraphComponent {
 
   @ViewChild(BaseChartDirective, {
      static: false
@@ -31,10 +31,14 @@ export class TeamsComponent {
   ngOnInit(): void {
     this.backCheck.backCheck(true);
     this.clientDataServie.getTableData().subscribe((obj : any) =>{
-      const users =obj.TEAM;
+      obj.map((obj)=>{
+        obj.color = ['red','blue', 'green', 'orange', 'yellow'][obj.star - 1];
+        return obj;
+      });
+      const users =obj;
       this.doughnutChartLabels = users.map(obj => obj.name);
       this.doughnutChartData= [
-        users.map(obj => obj.win)
+        users.map(obj => obj.star)
       ];
       this.colorsList = [
         {
