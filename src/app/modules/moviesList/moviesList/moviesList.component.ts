@@ -15,11 +15,11 @@ export interface Imovie{
 
 @Component({
   selector: 'app-table',
-  templateUrl: './player-conference-team.component.html',
-  styleUrls: ['./player-conference-team.component.scss']
+  templateUrl: './moviesList.component.html',
+  styleUrls: ['./moviesList.component.scss']
 })
 
-export class PlayerConferenceTeamComponent implements OnInit {
+export class MoviesListTeamComponent implements OnInit {
   displayedColumns: string[] = ['author', 'name', 'delete'];
   NAMES : string [];
   COLORS : string [];
@@ -55,7 +55,7 @@ export class PlayerConferenceTeamComponent implements OnInit {
   }
 
   conferenceDetails(id){
-    this.router.navigate(['/player-conference/players-conference-details/', id], {relativeTo: this.route} );  
+    this.router.navigate(['/moviesList/moviesList-details/', id], {relativeTo: this.route} );  
   }
 
   applyFilter(filterValue: string) {
@@ -91,7 +91,7 @@ export class PlayerConferenceTeamComponent implements OnInit {
 
 @Component({
   selector: 'dialog-overview-example-dialog',
-  templateUrl: 'add_data.html',
+  templateUrl: 'movie-data-popup.html',
 })
 export class DialogOverviewExampleDialog {
 

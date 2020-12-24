@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
  {path:'authentication', component:LogInComponent},
  {path: 'dashboard', component : DashboardComponent },
- { path: 'player-conference', loadChildren: () => import('./modules/player-conference/player-conference.module').then(m => m.PlayerConferenceModule) },
+ { path: 'moviesList', loadChildren: () => import('./modules/moviesList/moviesList.module').then(m => m.MoviesListModule) },
  { path: 'moviesGraph', loadChildren: () => import('./modules/moviesGraph/moviesGraph.module').then(m => m.MoviesGraphModule) },
  { path: '',   redirectTo: '/authentication', pathMatch: 'full' },
  { path: '**', component: PageNotFoundComponent },
