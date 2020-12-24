@@ -18,11 +18,10 @@
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
         <td mat-cell [style.backgroundColor]="row.color" 
-        [style.color]="'white'"
+        [style.color]="'blue'"
         [style.fontSize]="'20px'"
-        [style.textShadow]="'2px 2px black'"
         *matCellDef="let row"
-        (click)="conferenceDetails(row._id)"> {{row.name}} </td>
+        (click)="conferenceDetails(row._id)"> <a>{{row.name}} </a> </td>
       </ng-container>
 
       <ng-container matColumnDef="delete">
