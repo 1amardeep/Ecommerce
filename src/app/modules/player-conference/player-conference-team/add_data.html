@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Add Movies</h1>
+<div mat-dialog-content>
+  <p>What's your favorite Movie?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <p>Author?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.author">
+  </mat-form-field>
+  <p>Tags?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.tags">
+  </mat-form-field>
+  <p>Is Published?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.isPublished">
+  </mat-form-field>
+  <p>Rating out of 1 to 5?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.star">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" (click)="onSaveClick(data)" cdkFocusInitial>Ok</button>
+</div>

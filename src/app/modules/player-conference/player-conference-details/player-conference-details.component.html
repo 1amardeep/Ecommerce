@@ -1,16 +1,22 @@
 <div class="container">
 <mat-card class="example-card" [ngStyle]="{'background-color': selectedTeam?.color}">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': getImage()}"></div>
-      <mat-card-title>{{selectedTeam?.name}}</mat-card-title>
+      <mat-card-title>Edit Movie Details</mat-card-title>
     </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{selectedTeam?.description}}
-      </p>
+    <mat-card-content *ngIf="selectedTeam">
+      <p>What's your favorite Movie?</p>
+        <input  [(ngModel)]="selectedTeam.name">
+      <p>Author?</p>
+        <input  [(ngModel)]="selectedTeam.author">
+      <p>Tags?</p>
+        <input  [(ngModel)]="selectedTeam.tags">
+      <p>Is Published?</p>
+        <input disabled [(ngModel)]="selectedTeam.isPublished">
+      <p>Rating out of 1 to 5?</p>
+        <input  [(ngModel)]="selectedTeam.star">
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button class="btn btn-primary" (click)="editPlayer()">EDIT</button>
+      <button mat-button class="btn btn-primary" (click)="saveMovie()">Save</button>
     </mat-card-actions>
   </mat-card>
 </div>

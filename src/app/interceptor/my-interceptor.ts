@@ -9,9 +9,10 @@ export class MyInterceptor implements HttpInterceptor{
 
   constructor() { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const API_Key = '123456';
+   
+    const token_key = sessionStorage.getItem("token_key") || '';
 
-    return next.handle(req.clone({setHeaders : {API_Key}})).pipe(
+    return next.handle(req.clone({setHeaders : {'x-auth-token': token_key}})).pipe(
       filter( event => event instanceof HttpResponse),
       map((event : HttpResponse<any>) => {
        return event.clone({

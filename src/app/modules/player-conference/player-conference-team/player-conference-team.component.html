@@ -1,3 +1,5 @@
+
+<button class="btn btn-primary float-right" (click)="addMovie()"> add movies</button>
 <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
@@ -6,9 +8,9 @@
     <table mat-table [dataSource]="dataSource" matSort>
   
       <!-- ID Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
+        <td mat-cell *matCellDef="let row"> {{row.author}} </td>
       </ng-container>
   
   
@@ -20,7 +22,14 @@
         [style.fontSize]="'20px'"
         [style.textShadow]="'2px 2px black'"
         *matCellDef="let row"
-        (click)="conferenceDetails(row.id)"> {{row.name}} </td>
+        (click)="conferenceDetails(row._id)"> {{row.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef > Delete </th>
+        <td mat-cell *matCellDef="let row">
+           <mat-icon aria-hidden="false" (click)="deleteMovie(row._id)" aria-label="Example icon">delete</mat-icon>
+        </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
