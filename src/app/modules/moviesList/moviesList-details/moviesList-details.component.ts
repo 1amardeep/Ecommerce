@@ -5,10 +5,10 @@ import { ClientDataService } from 'src/app/services/client-data.service';
 import { BackButtonService } from 'src/app/services/back-button.service';
 
 @Component({
-  templateUrl: './player-conference-details.component.html',
-  styleUrls: ['./player-conference-details.component.scss']
+  templateUrl: './moviesList-details.component.html',
+  styleUrls: ['./moviesList-details.component.scss']
 })
-export class PlayerConferenceDetailsComponent implements OnInit {
+export class MoviesListDetailsComponent implements OnInit {
   selectedTeam ;
   id;
   constructor(   private route: ActivatedRoute, 
@@ -37,7 +37,7 @@ export class PlayerConferenceDetailsComponent implements OnInit {
   }
 
   editPlayer() {
-    this.router.navigate(['player-conference-edit'], {relativeTo: this.route} );   // { queryParams: { selectedTeam: this.selectedTeam.name } });
+    this.router.navigate(['moviesList-edit'], {relativeTo: this.route} );   // { queryParams: { selectedTeam: this.selectedTeam.name } });
   }
 
   saveMovie() {
