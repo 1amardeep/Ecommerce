@@ -23,5 +23,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" (click)="onSaveClick(data)" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="data.isPublished" (click)="onSaveClick(data)" cdkFocusInitial>Ok</button>
 </div>
