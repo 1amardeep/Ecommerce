@@ -98,7 +98,7 @@ export class DialogOverviewExampleDialog {
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
     private clientDataServie : ClientDataService,
-    @Inject(MAT_DIALOG_DATA) public data: {}) {}
+    @Inject(MAT_DIALOG_DATA) public data: Imovie) {}
 
   onNoClick(): void {
     this.dialogRef.close();
