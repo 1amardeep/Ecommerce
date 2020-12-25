@@ -20,10 +20,13 @@ export interface Imovie{
 })
 
 export class MoviesListTeamComponent implements OnInit {
-  displayedColumns: string[] = ['author', 'name', 'delete'];
+  displayedColumns: string[] = ['author', 'name', 'rating','delete'];
   NAMES : string [];
   COLORS : string [];
+  ratingArr = [];
   name: string = 'Movies';
+  color : string = 'accent'
+  starCount : number = 5;
   dataSource: MatTableDataSource<data>;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -46,6 +49,14 @@ export class MoviesListTeamComponent implements OnInit {
     this.clientDataServie.getTableData().subscribe((obj : any) =>{
 
       const users =obj || {};
+      obj.map((a)=>{
+        a.ratingArr = [];
+        for (let index = 0; index < this.starCount; index++) {
+          a.ratingArr.push(index);
+        } 
+        return a; 
+      });
+     
       this.dataSource = new MatTableDataSource(users);
 
       this.dataSource.paginator = this.paginator;
@@ -53,6 +64,15 @@ export class MoviesListTeamComponent implements OnInit {
 
     })
   }
+
+  
+  showIcon(rating: number, index : number) {
+   if (rating >= index + 1) {
+      return "star";
+   } else {
+     return "star_border";
+   }
+  } 
 
   conferenceDetails(id){
     this.router.navigate(['/moviesList/moviesList-details/', id], {relativeTo: this.route} );  
