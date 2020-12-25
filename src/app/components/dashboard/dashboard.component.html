@@ -1,8 +1,28 @@
- <div class="container">
-      <mat-card>
-        <button class="btn btn-primary" [routerLink]="['/moviesList']">Movie Admin Task</button>
-      </mat-card>
-      <mat-card>
-         <button class="btn btn-primary" [routerLink]="['/moviesGraph']">Movie Graph</button>
-        </mat-card>
-  </div> 
+<div>
+  <div class="w-100">
+    <div class="w-100">
+      <div class="card text-center">
+        <h5 class="card-header">
+          Movie Task
+        </h5>
+        <div class="card-body">
+          <h5 class="card-title">Movie List</h5>
+          <p class="card-text">Here Admin can view ,add, delete and update the movie list</p>
+          <a [routerLink]="['/moviesList']" class="btn btn-primary">Admin Task Link</a>
+        </div>
+      </div>
+    </div>
+    <div class="w-100">
+      <div class="card text-center">
+        <h5 class="card-header">
+          Movie Graphical Representation
+        </h5>
+        <div class="card-body">
+          <h5 class="card-title">Chart representation</h5>
+          <p class="card-text">Here Admin can view the movie details in Graphical representation</p>
+          <a [routerLink]="['/moviesGraph']" class="btn btn-primary">Movie Rating Graph</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
