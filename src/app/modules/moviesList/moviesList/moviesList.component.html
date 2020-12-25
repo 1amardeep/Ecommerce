@@ -24,6 +24,17 @@
         (click)="conferenceDetails(row._id)"> <a>{{row.name}} </a> </td>
       </ng-container>
 
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef > Rating </th>
+        <td mat-cell *matCellDef="let row">
+           <button mat-icon-button [color]="color" *ngFor="let ratingId of row.ratingArr;index as i">
+            <mat-icon>
+              {{showIcon(row.star, i)}}
+            </mat-icon>
+          </button>
+          </td>
+      </ng-container>
+
       <ng-container matColumnDef="delete">
         <th mat-header-cell *matHeaderCellDef > Delete </th>
         <td mat-cell *matCellDef="let row">
