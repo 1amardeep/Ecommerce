@@ -12,26 +12,26 @@ export class ClientDataService {
   ) { }
 
  public getTableData():  Observable<Object>{
-    return this.http.get("http://localhost:3000/api/movies");
+    return this.http.get("https://ancient-meadow-00692.herokuapp.com/api/movies");
   }
 
   public isAuthenticated(obj : { email : string ,  password: string}): Observable<Object>{
-    return this.http.post("http://localhost:3000/api/auth", obj);
+    return this.http.post("https://ancient-meadow-00692.herokuapp.com/api/auth", obj);
   }
 
   public deleteMovie(id){
-          return this.http.delete("http://localhost:3000/api/movies/deleteMovie/"+id);
+          return this.http.delete("https://ancient-meadow-00692.herokuapp.com/api/movies/deleteMovie/"+id);
   }
 
   public addMovies(data) : Observable<Object>{
-    return this.http.post('http://localhost:3000/api/movies/addMovie', data);
+    return this.http.post('https://ancient-meadow-00692.herokuapp.com/api/movies/addMovie', data);
   }
 
   public editMovie(id):  Observable<Object>{
-    return this.http.get("http://localhost:3000/api/movies/editMovie/"+id);
+    return this.http.get("https://ancient-meadow-00692.herokuapp.com/api/movies/editMovie/"+id);
   }
 
   public updateMovie(id, data):  Observable<Object>{
-    return this.http.put("http://localhost:3000/api/movies/"+id, data);
+    return this.http.put("https://ancient-meadow-00692.herokuapp.com/api/movies/"+id, data);
   }
 }
