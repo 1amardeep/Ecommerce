@@ -15,6 +15,10 @@ export class ClientDataService {
     return this.http.get("https://ancient-meadow-00692.herokuapp.com/api/movies");
   }
 
+  public registerUser(obj : {name : string, email : string ,  password: string}): Observable<Object>{
+    return this.http.post("https://ancient-meadow-00692.herokuapp.com/api/user/addUser", obj);
+  }
+
   public isAuthenticated(obj : { email : string ,  password: string}): Observable<Object>{
     return this.http.post("https://ancient-meadow-00692.herokuapp.com/api/auth", obj);
   }

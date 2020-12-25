@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DemoMaterialModule } from './modules/material-module/material-module';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { MyInterceptor } from './interceptor/my-interceptor';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MyInterceptor } from './interceptor/my-interceptor';
     PageNotFoundComponent,
     FooterComponent,
     LogInComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
