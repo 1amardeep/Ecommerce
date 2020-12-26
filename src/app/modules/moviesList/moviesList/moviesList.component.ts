@@ -97,7 +97,7 @@ export class MoviesListTeamComponent implements OnInit {
 
   addMovie(){
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '450px',
+      width: '300px',
       data : {}
     });
 
