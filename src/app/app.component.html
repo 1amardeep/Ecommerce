@@ -1,13 +1,18 @@
-<div class="container">
+<div>
   <nav class="navbar navbar-dark bg-primary" style="margin-bottom: 15px;">
     <a class="navbar-brand"><h5 class="text-center">{{title}}</h5></a>
     <button class="btn btn-primary float-right"  (click)="logOut()" *ngIf="showLogout">
       Logout
     </button>
   </nav>
-  <button class="btn btn-primary float-right"  (click)="goBack()" *ngIf="hideButton">
-    <i class="fas fa-arrow-left"></i>
-  </button>
-<router-outlet></router-outlet>
+ 
+  <div class="container">
+    <div class="clearfix">
+    <button class="btn btn-primary float-right"  (click)="goBack()" *ngIf="hideButton">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+  </div>
+    <router-outlet></router-outlet>
+  </div>
 <app-footer></app-footer>
 </div>

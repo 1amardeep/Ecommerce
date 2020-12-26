@@ -1,28 +1,21 @@
 <mat-card>
-    <mat-card-title>Login</mat-card-title>
-<mat-card-content>
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <p>
-    <mat-form-field>
-      <input type="text" matInput placeholder="Email" formControlName="email" required>
-    </mat-form-field>
-  </p>
+  <div class="form-group">
+    <label for="email">Email</label>
+      <input class="form-control" id="email" type="text" matInput placeholder="Email" formControlName="email" required>
+  </div>
 
-  <p>
-    <mat-form-field>
-      <input type="password" matInput placeholder="Password" formControlName="password" required>
-    </mat-form-field>
-  </p>
-
+    <div class="form-group">
+    <label for="password">Password</label>
+      <input  class="form-control"  type="password" id="password" matInput placeholder="Password" formControlName="password" required>
+    </div>
+ 
   <p *ngIf="errorlogin" class="error">
     {{ error }}
   </p>
-
   <div>
-    <button style="float:left"  [routerLink]="['/register']" type="button" mat-button>Register</button>
-    <button  style="float:right" type="submit" mat-button>Login</button>
+    <button class="btn btn-primary float-left" [routerLink]="['/register']" type="button">Register</button>
+    <button  class="btn btn-primary float-right" type="submit">Login</button>
   </div>
-
 </form>
-</mat-card-content>
 </mat-card>

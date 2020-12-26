@@ -1,23 +1,10 @@
-.container{
-  color: white;
-  .example-card {
-    max-width: 400px;
-  }
-  .example-header-image {
-    background-size: cover;
-  }
-
-  mat-card{
-     color: white;
-     font-weight: 400;
-     text-shadow: 2px 2px black;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
+:host {
+  display: flex;
+  justify-content: center;
 }
 
 
-  
- 
-  
-  
+mat-card{
+width: 25rem;
+}
+
