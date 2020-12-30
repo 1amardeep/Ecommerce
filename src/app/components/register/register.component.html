@@ -1,19 +1,18 @@
-<mat-card>
+<mat-card >
+  <h3>Sign up form</h3>
+  <p>Please fill out this form for register</p>
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="submit()">
 
       <div class="form-group">
-        <label for="name">Name</label>
         <input class="form-control" id="name" type="text" placeholder="Name" formControlName="name" required>
       </div>
 
       <div class="form-group">
-        <label for="email">Email</label>
         <input class="form-control" id="email" type="text" placeholder="Email" formControlName="email" required>
       </div>
 
       <div class="form-group">
-        <label for="password">Password</label>
         <input class="form-control" id="password" type="password"  placeholder="Password" formControlName="password" required>
       </div>
 
@@ -21,7 +20,7 @@
         {{ error }}
       </p>
       <div>
-        <button style="float:right" type="submit" class="btn btn-primary">Register</button>
+        <input  style="float:right" type="submit" value="Register" class="btn btn-primary btn-block">
       </div>
 
     </form>

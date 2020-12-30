@@ -6,3 +6,52 @@
     }
   
 }
+
+
+
+.navbar{
+    border-bottom: #00Bed6 3px solid;
+    opacity: 0.8;
+}
+
+#home-section{
+    background: url(../assets/images/cinema_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height : 700px;
+     color : #fff ;
+    .dark-overlay{
+        position: absolute;
+        top:0;
+        left : 0;
+        width :100%;
+        min-height: 700px;
+        background: rgba(0,0,0,0.7);
+    }
+
+    .home-inner{
+        padding-top :150px;
+    }
+
+    .card-form{
+        opacity : 0.8;
+    }
+
+    .fas{
+        color : #00Bed6;
+        background : #fff;
+        padding : 5px;
+        border-radius : 5px;
+    }
+}
+
+#explore-section{
+   .fas{
+       color : #ddd;
+       background : #333;
+       padding : 5px;
+       border-radius : 5px;
+   }
+
+}
