@@ -1,5 +1,9 @@
 
-<button class="btn btn-primary float-right" (click)="addMovie()"> Add Movies</button>
+<button class="btn btn-primary float-right ml-3" (click)="addMovie()"> Add Movies</button>
+<button *ngIf="false"  class="btn btn-primary float-right ml-3" (click)="themeOne()"> Theme One</button>
+<button *ngIf="false" class="btn btn-primary float-right ml-3" (click)="themeTwo()"> Theme Two</button>
+<button *ngIf="false"  class="btn btn-primary float-right ml-3" (click)="themeThree()"> Theme Three</button>
+
 <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
