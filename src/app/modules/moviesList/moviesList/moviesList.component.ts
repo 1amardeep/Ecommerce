@@ -78,6 +78,19 @@ export class MoviesListTeamComponent implements OnInit {
     this.router.navigate(['/moviesList/moviesList-details/', id], {relativeTo: this.route} );  
   }
 
+  themeOne(){
+    this.router.navigate(['/moviesList/themeOne'], {relativeTo: this.route});  
+  }
+
+  
+  themeTwo(){
+    this.router.navigate(['/moviesList/themeTwo'], {relativeTo: this.route});  
+  }
+
+  themeThree(){
+    this.router.navigate(['/moviesList/themeThree'], {relativeTo: this.route});  
+  }
+
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
